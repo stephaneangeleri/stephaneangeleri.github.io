@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -18,36 +19,37 @@ body {
   background-color: #11181C;
   color: #EDEAE3;
   font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
-  align-items: center;
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
-  overflow: hidden;
+  position: relative;
 }
 
 /* ENSŌ FILIGRANE */
 body::before {
   content: "";
-  position: absolute;
-  width: 700px;
-  height: 700px;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 650px;
+  height: 650px;
   background: url('enso.svg') center/contain no-repeat;
-  opacity: 0.04;
+  opacity: 0.035;
   pointer-events: none;
-  animation: slowRotate 90s linear infinite;
+  animation: slowRotate 120s linear infinite;
 }
 
-/* Animation rotation ultra lente */
 @keyframes slowRotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Apparition noble */
+/* CONTAINER */
 .container {
   max-width: 640px;
+  margin: auto;
   animation: fadeIn 2.5s ease forwards;
   opacity: 0;
 }
@@ -55,7 +57,7 @@ body::before {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -63,19 +65,21 @@ body::before {
   }
 }
 
+/* TYPOGRAPHIE */
+
 .name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 52px;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .divider {
   width: 50px;
   height: 1px;
   background: #A89262;
-  margin: 30px auto;
+  margin: 28px auto;
   opacity: 0.6;
 }
 
@@ -84,7 +88,7 @@ body::before {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #A89262;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 
 .description {
@@ -92,8 +96,10 @@ body::before {
   font-weight: 300;
   line-height: 1.9;
   color: #CFCBC2;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
+
+/* BOUTON */
 
 .button {
   display: inline-block;
@@ -105,7 +111,7 @@ body::before {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.4s ease;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .button:hover {
@@ -113,12 +119,15 @@ body::before {
   color: #11181C;
 }
 
+/* TELEPHONE */
+
 .phone {
   display: block;
   font-size: 14px;
   color: #EDEAE3;
   text-decoration: none;
   opacity: 0.75;
+  margin-bottom: 40px;
   transition: opacity 0.3s ease;
 }
 
@@ -126,11 +135,12 @@ body::before {
   opacity: 1;
 }
 
+/* SOCIALS */
+
 .socials {
-  margin-top: 60px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
 }
 
 .socials a {
@@ -147,9 +157,10 @@ body::before {
   opacity: 1;
 }
 
-/* ✅ RESPONSIVE PREMIUM */
+/* ✅ TABLETTE */
 
 @media (max-width: 768px) {
+
   .name {
     font-size: 42px;
   }
@@ -159,28 +170,45 @@ body::before {
   }
 
   body::before {
-    width: 500px;
-    height: 500px;
+    width: 480px;
+    height: 480px;
   }
 }
 
+/* ✅ MOBILE OPTIMISÉ */
+
 @media (max-width: 480px) {
+
+  body {
+    padding: 24px 18px;
+  }
+
   .name {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .subtitle {
     letter-spacing: 3px;
+    margin-bottom: 30px;
   }
 
   .description {
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    margin-bottom: 30px;
+  }
+
+  .phone {
+    margin-bottom: 30px;
   }
 
   body::before {
-    width: 380px;
-    height: 380px;
+    width: 360px;
+    height: 360px;
   }
 }
 
@@ -199,7 +227,7 @@ body::before {
 
   <div class="description">
     Séances individuelles.<br>
-    Approche traditionnelle japonaise.<br>
+    Approche traditionnelle japonaise.
   </div>
 
   <a href="https://www.stephane-shiatsu-guadeloupe.com/" 
@@ -212,7 +240,7 @@ body::before {
   </a>
 
   <div class="socials">
-    <a href="https://www.instagram.com/stephaneangeleri/?hl=fr" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/stephaneangeleri/" target="_blank">Instagram</a>
     <a href="https://www.facebook.com/Stephane.Angeleri/" target="_blank">Facebook</a>
   </div>
 
