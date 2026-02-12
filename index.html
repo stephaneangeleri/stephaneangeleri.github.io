@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stéphane Angeleri | Shiatsu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #11181C;
+  color: #EDEAE3;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+/* ENSŌ FILIGRANE */
+body::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: url('enso.svg') center/contain no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  animation: slowRotate 90s linear infinite;
+}
+
+/* Animation rotation ultra lente */
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Apparition noble */
+.container {
+  max-width: 640px;
+  animation: fadeIn 2.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 50px;
+  height: 1px;
+  background: #A89262;
+  margin: 30px auto;
+  opacity: 0.6;
+}
+
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #A89262;
+  margin-bottom: 45px;
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #CFCBC2;
+  margin-bottom: 70px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 36px;
+  border: 1px solid #A89262;
+  color: #A89262;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  margin-bottom: 50px;
+}
+
+.button:hover {
+  background: #A89262;
+  color: #11181C;
+}
+
+.phone {
+  display: block;
+  font-size: 14px;
+  color: #EDEAE3;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.phone:hover {
+  opacity: 1;
+}
+
+.socials {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.socials a {
+  color: #A89262;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.socials a:hover {
+  opacity: 1;
+}
+
+/* ✅ RESPONSIVE PREMIUM */
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  body::before {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    letter-spacing: 3px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  body::before {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="name">Stéphane Angeleri</div>
+
+  <div class="divider"></div>
+
+  <div class="subtitle">Shiatsu · Guadeloupe</div>
+
+  <div class="description">
+    Séances individuelles.<br>
+    Approche traditionnelle japonaise.<br>
+  </div>
+
+  <a href="https://www.stephane-shiatsu-guadeloupe.com/" 
+     class="button" target="_blank">
+     Prendre rendez-vous
+  </a>
+
+  <a href="tel:+590690509014" class="phone">
+    +590 690 50 90 14
+  </a>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/stephaneangeleri/?hl=fr" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/Stephane.Angeleri/" target="_blank">Facebook</a>
+  </div>
+
+</div>
+
+</body>
+</html>
