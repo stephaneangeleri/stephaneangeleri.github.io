@@ -1,10 +1,21 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Stéphane Angeleri
-ORG:Shiatsu Guadeloupe
-TITLE:Praticien Shiatsu
-TEL;TYPE=CELL:+590690509014
-URL:https://www.stephane-shiatsu-guadeloupe.com/
-URL:https://www.instagram.com/stephaneangeleri?igsh=MTJvdHhneHp5cjdjaw==
-URL:https://www.facebook.com/Stephane.Angeleri/
+FN:Stéphane ANGELERI
+N:ANGELERI;Stéphane;;;
+item1.EMAIL;TYPE=INTERNET:stephane.angeleri@gmail.com
+item1.X-ABLabel:
+item2.TEL:+590 690 50 90 14
+item2.X-ABLabel:
+item3.ADR:97180;;8 impasse Roland Césaire;Sainte-Anne;;97180;GP;8 impasse R
+ oland Césaire\n97180\nSainte-Anne 97180\nGP
+item3.X-ABLabel:
+item4.URL: https\://www.stephane-shiatsu-guadeloupe.com/
+item4.X-ABLabel:
+item5.URL: https\://instagram.com/stephaneangeleri
+item5.X-ABLabel:
+item6.URL:https\://www.facebook.com/Stephane.Angeleri/
+item6.X-ABLabel:
+PHOTO:https://lh3.googleusercontent.com/contacts/AG6tpzHYnikDE-5c-cRNSHH5or
+ 2Zj56_1Tlg-qR5R-9NCIs9QTXx5h88
+CATEGORIES:myContacts
 END:VCARD

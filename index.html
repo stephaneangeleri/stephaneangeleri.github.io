@@ -3,12 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stéphane Angeleri | Shiatsu</title>
 
+<!-- 1. REFERENCEMENT & TITRE -->
+<title>Stéphane Angeleri | Shiatsu Guadeloupe</title>
+<meta name="description" content="Praticien Shiatsu. Retrouvez l'équilibre du corps et de l'esprit.">
+
+<!-- 2. IMAGE DE PARTAGE (Pour WhatsApp/Facebook) -->
+<!-- C'est ici qu'on dit aux réseaux sociaux d'aller chercher l'image sur GitHub -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stéphane Angeleri - Shiatsu">
+<meta property="og:description" content="Prendre rendez-vous, me contacter ou me localiser.">
+<meta property="og:image" content="https://stephaneangeleri.github.io/share.jpg">
+<meta property="og:url" content="https://stephaneangeleri.github.io/">
+
+<!-- 3. POLICES & ICONES -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<!-- Bibliothèque d'icônes (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-
+/* --- DESIGN GÉNÉRAL --- */
 * {
   margin: 0;
   padding: 0;
@@ -16,18 +30,19 @@
 }
 
 body {
-  background-color: #11181C;
-  color: #EDEAE3;
+  background-color: #11181C; /* Fond sombre */
+  color: #EDEAE3; /* Texte clair */
   font-family: 'Montserrat', sans-serif;
   min-height: 100dvh;
   display: flex;
   justify-content: center;
+  align-items: center; /* Centre verticalement aussi */
   text-align: center;
   padding: 40px 20px;
   position: relative;
 }
 
-/* ENSŌ FILIGRANE */
+/* IMAGE DE FOND (FACULTATIF : Si vous avez enso.svg, sinon ça sera juste noir) */
 body::before {
   content: "";
   position: fixed;
@@ -36,9 +51,10 @@ body::before {
   width: 650px;
   height: 650px;
   background: url('enso.svg') center/contain no-repeat;
-  opacity: 0.035;
+  opacity: 0.03;
   pointer-events: none;
   animation: slowRotate 120s linear infinite;
+  z-index: -1;
 }
 
 @keyframes slowRotate {
@@ -46,164 +62,129 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
-/* CONTAINER */
+/* CONTAINER PRINCIPAL */
 .container {
-  max-width: 640px;
-  margin: auto;
-  animation: fadeIn 2.5s ease forwards;
-  opacity: 0;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* PHOTO DE PROFIL (CERCLE) */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #A89262;
+  margin: 0 auto 25px auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 /* TYPOGRAPHIE */
-
 .name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-bottom: 18px;
-}
-
-.divider {
-  width: 50px;
-  height: 1px;
-  background: #A89262;
-  margin: 28px auto;
-  opacity: 0.6;
+  margin-bottom: 10px;
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 12px;
-  letter-spacing: 4px;
+  font-size: 11px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: #A89262;
-  margin-bottom: 42px;
+  color: #A89262; /* Couleur dorée */
+  margin-bottom: 25px;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: #A89262;
+  margin: 0 auto 25px auto;
+  opacity: 0.5;
 }
 
 .description {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.6;
   color: #CFCBC2;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 }
 
 /* BOUTONS */
-
 .button {
-  display: inline-block;
-  padding: 15px 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
   border: 1px solid #A89262;
   color: #A89262;
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: all 0.4s ease;
-  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  background: transparent;
 }
 
 .button:hover {
   background: #A89262;
   color: #11181C;
+  cursor: pointer;
 }
 
-/* TELEPHONE */
+.button i {
+    margin-right: 10px;
+    font-size: 14px;
+}
 
+/* TÉLÉPHONE */
 .phone {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #EDEAE3;
   text-decoration: none;
-  opacity: 0.75;
-  margin: 30px 0 40px 0;
-  transition: opacity 0.3s ease;
+  opacity: 0.8;
+  margin: 25px 0 35px 0;
+  letter-spacing: 1px;
 }
 
-.phone:hover {
-  opacity: 1;
-}
-
-/* SOCIALS */
-
+/* RÉSEAUX SOCIAUX & GPS */
 .socials {
   display: flex;
   justify-content: center;
-  gap: 28px;
+  gap: 30px;
 }
 
 .socials a {
   color: #A89262;
-  text-decoration: none;
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  font-size: 24px;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 
 .socials a:hover {
   opacity: 1;
-}
-
-/* TABLETTE */
-
-@media (max-width: 768px) {
-
-  .name {
-    font-size: 42px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  body::before {
-    width: 480px;
-    height: 480px;
-  }
+  transform: translateY(-3px);
 }
 
 /* MOBILE */
-
 @media (max-width: 480px) {
-
-  body {
-    padding: 24px 18px;
-  }
-
-  .name {
-    font-size: 32px;
-  }
-
-  .subtitle {
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-  }
-
-  .description {
-    font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 40px;
-  }
-
-  body::before {
-    width: 360px;
-    height: 360px;
-  }
+  .name { font-size: 34px; }
+  .profile-pic { width: 110px; height: 110px; }
 }
-
 </style>
 </head>
 
@@ -211,38 +192,53 @@ body::before {
 
 <div class="container">
 
+  <!-- PHOTO DE PROFIL (Fichier : profil.jpg) -->
+  <img src="profil.png" alt="Stéphane Angeleri" class="profile-pic">
+
   <div class="name">Stéphane Angeleri</div>
-
-  <div class="divider"></div>
-
   <div class="subtitle">Shiatsu · Guadeloupe</div>
+  
+  <div class="divider"></div>
 
   <div class="description">
     Séances individuelles.<br>
-    Approche traditionnelle japonaise.
+    Approche traditionnelle japonaise.<br>
+   
   </div>
 
-  <a href="https://www.stephane-shiatsu-guadeloupe.com/" 
-     class="button" target="_blank">
+  <!-- BOUTON 1 : SITE WEB (RDV) -->
+  <a href="https://www.stephane-shiatsu-guadeloupe.com/" class="button" target="_blank">
      Prendre rendez-vous
   </a>
 
-  <!-- ✅ NOUVEAU BOUTON CONTACT -->
+  <!-- BOUTON 2 : VCARD (Fichier : contact.vcf) -->
   <a href="contact.vcf" class="button" download>
-     Enregistrer le contact
+     <i class="fa-regular fa-address-book"></i> Enregistrer contact
   </a>
 
+  <!-- TÉLÉPHONE -->
   <a href="tel:+590690509014" class="phone">
     +590 690 50 90 14
   </a>
 
+  <!-- ICONES BAS DE PAGE -->
   <div class="socials">
-    <a href="https://www.instagram.com/stephaneangeleri/"
-   target="_blank"
-   rel="noopener noreferrer">
-  Instagram
-</a>
-    <a href="https://www.facebook.com/Stephane.Angeleri/" target="_blank">Facebook</a>
+    
+    <!-- GPS / GOOGLE MAPS -->
+    <a href="https://g.page/Shiatsu-Guadeloupe?share" target="_blank" aria-label="Localiser">
+      <i class="fas fa-location-dot"></i>
+    </a>
+
+    <!-- INSTAGRAM (Lien optimisé mobile) -->
+    <a href="https://instagram.com/stephaneangeleri" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/Stephane.Angeleri/" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    
   </div>
 
 </div>
